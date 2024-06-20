@@ -13,6 +13,16 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    max-width: 400px;
+    gap: 10px;
+}
+
+.botonVM {
+    background-color: cadetblue;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
 }
 
 /* Pseudo-Elementos */
@@ -20,8 +30,37 @@ p::first-letter {
     font-size: 2em;
 }
 
-p::first-line{
+p::first-line {
+    font-style: italic;
+}
+
+.pTarj::after {
+    content: "(Leer Mas...)";
+}
+
+.pTarj::before {
+    content: "*";
+}
+
+::placeholder {
+    color: rgb(74, 74, 74);
+    font-size: 0.7em;
     font-style: italic;
 }
 
 /* Pseudo-Clases */
+.botonVM:hover {
+    background-color: aqua;
+}
+
+.botonVM:active {
+    background-color: blue;
+}
+
+.botonVM:disabled {
+    background-color: grey;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px aqua;
+}

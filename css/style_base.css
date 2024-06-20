@@ -114,6 +114,9 @@ nav ul li a:hover{
 .container a:hover{
     color:var(--decoration-color);
 }
+a:visited {
+    color: green;
+}
  
 /* spinner| */
 .spinner{
