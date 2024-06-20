@@ -55,7 +55,8 @@ nav ul li a:before{
     /* alto y ancho=0 */
     /* transition: ; */
 }
-nav ul li a:hover::before{
+nav ul li a:hover{
+    color: #c79800;
     /* ancho final */
 }
 
@@ -86,6 +87,7 @@ nav ul li a:hover::before{
 .social ul li .icon-mail {background: #666666;}
 
 .social ul li a:hover{
+    font-size: 2em;
     /* transform: ; */
     /* padding: ; */
 }
