@@ -1,0 +1,92 @@
+  /* Pseudoelementos */
+  header::before {
+      content: "Bienvenido a ";
+      display: block;
+      text-align: center;
+      font-size: 1.2em;
+      color: #ffffff;
+  }
+
+  header::after {
+      content: "Explora nuestros servicios!";
+      display: block;
+      text-align: center;
+      font-size: 1em;
+      color: #fff;
+  }
+
+  nav ul li a::before {
+      display: block;
+      content: ' \f015';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+  }
+
+  nav ul li a::after {
+      content: ' \f0d7';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      margin-left: 8px;
+  }
+
+  .container p::first-line {
+      font-weight: bold;
+      color: #333;
+  }
+
+  .container p::first-letter {
+      font-size: 2em;
+      color: #ff5733;
+      float: left;
+      padding-right: 5px;
+  }
+
+  .container p::selection {
+      background: #ffcccb;
+  }
+
+  /* Pseudoclases */
+  nav ul li a:hover {
+      color: #ff5733;
+  }
+
+  nav ul li a:focus {
+      outline: 2px solid #537bc0;
+  }
+
+  .social a:hover {
+      color: #ff5733;
+  }
+
+  .social a:active {
+      outline: 2px solid #59b159;
+  }
+
+  /* Botón */
+  .servicios-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      position: relative;
+  }
+
+  .servicios-btn::after {
+      content: '\f013';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  .servicios-btn:hover {
+      background-color: #ff5733;
+  }
+
+  .servicios-btn:focus {
+      outline: 2px solid #ff5733;
+  }
