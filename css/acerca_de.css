@@ -1,20 +1,90 @@
-/* De estilo */
-h2 {font-size: 20px;}
-
+/* De estilo -- >> No hacen parte del ejercicio */
+h1 { color: var(--decoration-color);}  
+h2 { font-size: 20px; margin-top: 24px;}
 hr { margin: 40px 0px; }
+ul.ex { padding: 20px 40px; }
+form {margin: 20px 0px;}
+.radio, .checkbox, .terminos { position: relative !important; }
+.radio { top: 8px; }
+.checkbox { top: 8px; left: 20px; }
+.terminos { left: 80px; }
+.submit { margin: 18px; padding: 4px 16px; font-size: 0.9rem; font-weight: bold; }
+input, label { display: inline-block; margin: 8px; height: 28px; padding: 8px; }
+input, textarea { border: 1px solid #CCC; border-radius: 6px; outline: 0px !important; }
+textarea { margin: 0px 18px;}
+label { min-width: 100px; }
+.hidden { display: none ;}
 
-.block {
-  display: flex;
-  padding: 20px;
-}
+/* PSEUDO CLASES Front UX Clase 16-17 - - - - - - - - - -*/
+/* John Valencia */
 
-/* Ejercicio Pseudo clases */
+
+/* BLOQUE 1 -- >> hover, active, visited */
 
 .pseudo a:hover {
   color: black !important;
   background-color: var(--decoration-color) !important;
 }
 
-.pseudo ul li:first-child {
-  color: var(--decoration-color) !important;
+.pseudo a:active { text-decoration: underline !important; }
+.pseudo a:visited { text-decoration: underline !important; }
+
+
+
+/* BLOQUE 2 -- >> first-child, last-child, nth-child */
+
+.pseudo ul li:first-child { margin-left: -20px; }
+.pseudo ul li:last-child { margin-left: 40px; }
+.pseudo ul li:nth-child(odd) { color: var(--decoration-color) !important; }
+
+
+
+/* BLOQUE 3 -- >> required ,focus ,optional ,valid ,disabled */
+.pseudo :required { border-color: orange; }
+.pseudo :focus { border-color: cyan; }
+.pseudo :optional, .pseudo :valid { border-color: #08fe00 }
+.pseudo :disabled { border-color: gray; }
+
+/* BLOQUE 4 */
+::selection {
+  background-color: var(--decoration-color);
+  color: white;
 }
+
+.line::first-line {
+  color: var(--decoration-color);
+  font-style: italic;
+}
+
+.letter::first-letter {
+  background-color: var(--decoration-color);
+  color: white;
+  float: left; 
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 0.2em;
+  padding: 2px 8px;
+}
+
+::placeholder { color: var(--decoration-color); }
+.placeholder { margin: 10px 0; }
+
+.marker::marker {
+  color: var(--decoration-color);
+  font-size: 1.2em;
+}
+
+.spelling::spelling-error { color: red; }
+
+.backdrop::backdrop { background-color: rgba(0, 0, 0, 0.8); }
+
+/* Ajuste para que quede igual al GIF */
+nav ul li a:hover { color: white; }
+nav ul li a:before {
+  width: 0%;
+  height: 2px;
+  transition: width 0.25s ease-in-out;
+}
+
+nav ul li a:hover::before { width: 100%; }

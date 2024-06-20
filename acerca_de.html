@@ -10,52 +10,143 @@
 		<link rel="stylesheet" href="/css/acerca_de.css">
 </head>
 <body >
-    <header>
-        <img class="logo" src="img/logo.svg" alt="">
+	<header>
+		<img class="logo" src="img/logo.svg" alt="">
 		<nav>
 			<ul>
 				<li><a href="/">Inicio</a></li>
-				<li><a href="#">Categorias</a></li>
+				<li><a href="/categorias.html">Categorias</a></li>
 				<li><a href="/servicios.html">Servicios</a></li>
 				<li><a href="/acerca_de.html">Acerca de</a></li>
 				<li><a href="#">Contacto</a></li>
 			</ul>
 		</nav>
 	</header>
-    <aside class="social">
-		<ul>
-			<li><a href="#" target="_blank" class="icon-facebook"><i class="fab fa-facebook"></i></a></li>
-			<li><a href="#" target="_blank" class="icon-twitter"><i class="fab fa-twitter"></i></a></li>
-			<li><a href="#" target="_blank" class="icon-instagram"><i class="fas fa-camera"></i></a></li>
-			<li><a href="#" target="_blank" class="icon-whatsapp"><i class="fas fa-comment"></i></a></li>
-			<li><a href="mailto:lromiglia@digitalhouse.com" class="icon-mail"><i class="fas fa-envelope"></i></a></li>
-		</ul>
-    </aside>
-    <section class="container ">
-        <h1>Ejemplos de Pseudo Clases :</h1>
-        <p>Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo, :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.</p>
-			</section>
-			<section class="container pseudo">
-				<h2>Hover</h2>
-				<div>
-					<a href="/">Inicio</a>
-					<a href="/">Categorías</a>
-					<a href="/servicios.html">Servicios</a>
-					<a href="/acerca_de.html">Acerca de</a>
-					<a href="/">Contacto</a>
+	<aside class="social">
+	<ul>
+		<li><a href="#" target="_blank" class="icon-facebook"><i class="fab fa-facebook"></i></a></li>
+		<li><a href="#" target="_blank" class="icon-twitter"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="#" target="_blank" class="icon-instagram"><i class="fas fa-camera"></i></a></li>
+		<li><a href="#" target="_blank" class="icon-whatsapp"><i class="fas fa-comment"></i></a></li>
+		<li><a href="mailto:lromiglia@digitalhouse.com" class="icon-mail"><i class="fas fa-envelope"></i></a></li>
+	</ul>
+	</aside>
+	<!-- Intro Pseudo Clases -->
+	<section class="container">
+		<h1>Ejemplos de Pseudo Clases :</h1>
+		<p>Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo, :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.</p>
+	</section>
+	<!-- Ejemplos Pseudo Clases -->
+	<section class="container pseudo">
+		<div id="bloque-1">
+		<h2 >1. Active, Hover</h2>
+			<div>
+				<a href="/">Inicio</a>
+				<a href="/categorias.html">Categorías</a>
+				<a href="/servicios.html">Servicios</a>
+				<a href="/acerca_de.html">Acerca de</a>
+				<a href="/">Contacto</a>
+			</div>
+			<div>
+				<a href="/acerca_de.html#bloque-1">Bloque 1</a>
+				<a href="/acerca_de.html#bloque-2">Bloque 2</a>
+				<a href="/acerca_de.html#bloque-3">Bloque 3</a>
+				<a href="/acerca_de.html#bloque-4">Bloque 4</a>
+			</div>
+			<hr>
+		</div>
+		<div id="bloque-2">
+			<h2>2. First-child, Last-child, Nth-Child</h2>
+			<ul class="ex">
+				<li>Primer elemento</li>
+				<li>Segundo elemento</li>
+				<li>Tercero elemento</li>
+				<li>Cuarto elemento</li>
+				<li>Último elemento</li>
+			</ul>
+			<hr>
+		</div>
+		<div id="bloque-3">
+			<h2>3. Disabled, Focus, Optional, Required, Valid</h2>
+			<form>
+				<p>Focus en Cyan, Optional y Valid en Verde, Required en Naranja y Disabled en Gris</p>
+				<div class="group">
+					<label for="nombre">Nombre:</label>
+					<input type="text" id="nombre" name="nombre" required><br>
 				</div>
-				<hr>
-				<h2>First, first-child</h2>
-				<div class="block">
-					<ul class="pseudo">
-						<li>Primero</li>
-						<li>Segundo</li>
-						<li>Tercero</li>
-						<li>Cuarto</li>
-						<li>Quitno</li>
-					</ul>
+				<div class="group">
+					<label for="apellidos">Apellidos:</label>
+					<input type="text" id="apellidos" name="apellidos" required><br>
 				</div>
-		</section>
-    <span class="spinner"></span>
+				<div class="group">
+					<label for="telefono">Teléfono:</label>
+					<input type="tel" id="telefono" name="telefono" required><br>
+				</div>
+				<div class="group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required><br>
+				</div>
+				<div class="group">
+					<label for="edad">Edad:</label>
+					<input type="number" id="edad" name="edad" min="18" required><br>
+				</div>
+				<div class="group">
+					<label for="otro">Disabled:</label>
+					<input type="text" id="otro" name="otro" min="18" disabled><br>
+				</div>
+				<div class="group">
+					<label>Sexo:</label>
+					<input class="radio" type="radio" id="sexo-m" name="sexo" value="masculino" required>
+					<label for="sexo-m">Masculino</label>
+					<input class="radio" type="radio" id="sexo-f" name="sexo" value="femenino" required>
+					<label for="sexo-f">Femenino</label><br>
+				</div>
+				<div class="group">
+					<label for="descripcion">Descripción:</label><br>
+					<textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea><br>
+				</div>
+				<div class="group">
+					<input class="submit" type="submit" value="Enviar">
+				</div>
+			</form>
+			<hr>
+		</div>
+	</section>
+	<!-- Intro Pseudo Elementos -->
+	 <section class="container" id="bloque-4">
+		<h1>Pseudo Elementos</h1>
+		<p>Al igual que las Pseudo-classes, los pseudo-elementos se añaden a los selectores, pero en cambio, no describen un estado especial sino que, permiten añadir estilos a una parte concreta del documento. Por ejemplo, el pseudoelemento <code>::first-line</code> selecciona solo la primera línea del elemento especificado por el selector.</p>
+		<div>
+			<hr>
+			<h2>Backdrop</h2>
+			<p class="backdrop">
+				Intenté con eso, pero no funcionó, hasta que se me ocurrió... pero tampoco.
+				<button class="backdrop" onclick="alert('Mensaje...');">Probar</button>
+			</p>
+			<hr>
+			<h2>First-letter</h2>
+			<p class="letter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero pariatur neque fugit minima similique deleniti possimus ipsa, assumenda excepturi rerum quia ut eaque qui eveniet officiis minus optio delectus!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veniam incidunt asperiores nemo sed suscipit numquam quaerat blanditiis aliquid veritatis maxime quibusdam, iusto minima aspernatur? Qui accusantium asperiores aliquam dicta.</p>
+			<hr>
+			<h2>First-line</h2>
+			<p class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero pariatur neque fugit minima similique deleniti possimus ipsa, assumenda excepturi rerum quia ut eaque qui eveniet officiis minus optio delectus!. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non saepe vitae reprehenderit nam adipisci veritatis numquam dolore, similique quo cupiditate ullam nemo temporibus sed harum corporis quisquam quia! Quaerat, sunt!</p>
+			<hr>
+			<h2>Placeholder</h2>
+			<input class="placeholder" placeholder="Texto en placeholder" type="text">
+			<hr>
+			<h2>Selection</h2>
+			<p>Seleccione un texto, usamos el color primario.</p>
+			<hr>
+			<h2>Spelling Error</h2>
+			<p class="spelling" contenteditable>Interesante, <b>selecciona este texto</b> para que funcione, porque debemos combinarla con el atributo <code>contenteditable</code> y aparecen los herrores de ortografía.</p>
+			<hr>
+			<h2>Marker</h2>
+			<ul class="ex">
+				<li class="marker">Primero</li>
+				<li class="marker">Segundo</li>
+				<li class="marker">Tercero</li>
+				<li class="marker">Cuarto</li>
+			</ul>
+		</div>
+	 </section>
 </body>
 </html>
