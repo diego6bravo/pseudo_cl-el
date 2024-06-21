@@ -89,3 +89,14 @@ nav ul li a:before {
 }
 
 nav ul li a:hover::before { width: 100%; }
+
+
+/* Estilo con pseudo elementos */
+
+h2::before {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 1px;
+  margin: 45px 0px;
+}
